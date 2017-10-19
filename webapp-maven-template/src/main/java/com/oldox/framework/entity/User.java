@@ -15,8 +15,6 @@ public class User {
 	
 	private String username;
 	
-	private Date birthday;
-
 	@Id
 	@GeneratedValue
 	public Long getId() {
@@ -34,14 +32,6 @@ public class User {
 
 	public void setUsername(String username) {
 		this.username = username;
-	}
-
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
 	}
 
 }
