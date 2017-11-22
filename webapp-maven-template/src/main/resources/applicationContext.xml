@@ -12,8 +12,5 @@
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan> -->
-	
-	<context:component-scan base-package="com.oldox.*.service,com.oldox.*.dao">
-	</context:component-scan>
-
+	<context:component-scan base-package="com.oldox.*.dao,com.oldox.*.service"></context:component-scan>
 </beans>
