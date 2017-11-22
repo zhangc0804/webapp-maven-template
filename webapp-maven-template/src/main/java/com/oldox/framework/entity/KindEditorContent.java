@@ -1,20 +1,17 @@
 package com.oldox.framework.entity;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class User {
-	
+public class KindEditorContent {
+
 	private Long id;
-	
-	private String username;
-	
+
+	private String content;
+
 	@Id
 	@GeneratedValue
 	public Long getId() {
@@ -26,12 +23,12 @@ public class User {
 	}
 
 	@Column
-	public String getUsername() {
-		return username;
+	public String getContent() {
+		return content;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 }

@@ -7,10 +7,13 @@
 	<!-- spring config <context:property-placeholder location="classpath:jdbc.properties" 
 		/> -->
 
-	<context:component-scan base-package="com.oldox"
+	<!-- <context:component-scan base-package="com.oldox"
 		use-default-filters="false">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan> -->
+	
+	<context:component-scan base-package="com.oldox.*.service,com.oldox.*.dao">
 	</context:component-scan>
 
 </beans>
