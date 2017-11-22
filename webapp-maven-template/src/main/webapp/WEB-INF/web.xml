@@ -6,12 +6,26 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
+  <listener>
+  	<listener-class>com.oldox.examples.listener.MyServletContextListener</listener-class>
+  </listener>
+  
   <servlet>
   	<servlet-name>GreetingServlet</servlet-name>
   	<servlet-class>com.oldox.examples.servlet.GreetingServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ServletListenerServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.ServletListenerServlet</servlet-class>
+  </servlet>
+  
+  
   <servlet-mapping>
   	<servlet-name>GreetingServlet</servlet-name>
   	<url-pattern>/greeting</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletListenerServlet</servlet-name>
+  	<url-pattern>/listener</url-pattern>
   </servlet-mapping>
 </web-app>

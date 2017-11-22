@@ -1,8 +1,10 @@
 package com.oldox.examples.servlet;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,14 +21,11 @@ import org.slf4j.LoggerFactory;
  * @author ZhangChao
  *
  */
-public class GreetingServlet extends HttpServlet {
-	Logger logger = LoggerFactory.getLogger(GreetingServlet.class);
-	// 静态变量，servlet实例化次数
-	private static int instanceCount = 0;
+public class ServletListenerServlet extends HttpServlet {
+	Logger logger = LoggerFactory.getLogger(ServletListenerServlet.class);
 
-	public GreetingServlet() {
-		instanceCount++;
-		System.out.println("GreetingServlet method is invoked");
+	public ServletListenerServlet() {
+		System.out.println("ServletListenerServlet method is invoked");
 	}
 
 	@Override
@@ -38,10 +37,13 @@ public class GreetingServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("doPost method is invoked");
+		
+		// 获取ServletContext初始化时设置的参数
+		ServletContext context = req.getSession().getServletContext();
+		Map<String, String> params = (Map<String, String>)context.getAttribute("params");
+		System.out.println(params);
+		
 		resp.getWriter().write("aaaaaaaaaaaaaaaaa");
-
-		// 判断Servlet实例化次数
-		System.out.println("the count of this servlet's instance is:" + instanceCount);
 		resp.getWriter().close();
 	}
 
