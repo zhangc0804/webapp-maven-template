@@ -42,6 +42,9 @@ public class ServletListenerServlet extends HttpServlet {
 		ServletContext context = req.getSession().getServletContext();
 		Map<String, String> params = (Map<String, String>)context.getAttribute("params");
 		System.out.println(params);
+		context.setAttribute("paramAdd", "valueAdd");
+		context.setAttribute("params", "valueModify");
+		context.removeAttribute("params");
 		
 		resp.getWriter().write("aaaaaaaaaaaaaaaaa");
 		resp.getWriter().close();

@@ -8,6 +8,10 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 public class MyServletContextListener implements ServletContextListener {
+	
+	public MyServletContextListener() {
+		System.out.println("the MyServletContextListener constructor is invoked");
+	}
 
 	@Override
 	public void contextDestroyed(ServletContextEvent event) {
