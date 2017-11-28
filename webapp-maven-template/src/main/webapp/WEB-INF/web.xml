@@ -22,6 +22,10 @@
   	<servlet-name>ServletListenerServlet</servlet-name>
   	<servlet-class>com.oldox.examples.servlet.ServletListenerServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>HttpRequestExampleServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.HttpRequestExampleServlet</servlet-class>
+  </servlet>
   
   
   <servlet-mapping>
@@ -31,5 +35,9 @@
   <servlet-mapping>
   	<servlet-name>ServletListenerServlet</servlet-name>
   	<url-pattern>/listener</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HttpRequestExampleServlet</servlet-name>
+  	<url-pattern>/request</url-pattern>
   </servlet-mapping>
 </web-app>
