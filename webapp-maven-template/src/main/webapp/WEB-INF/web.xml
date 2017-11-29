@@ -14,6 +14,24 @@
   	<listener-class>com.oldox.examples.listener.MyServletContextAttributeListner</listener-class>
   </listener>
   
+  <filter>
+  	<filter-name>FilterChainTestFilter</filter-name>
+  	<filter-class>com.oldox.examples.filter.FilterChainTestFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>FilterChainTestFilter2</filter-name>
+  	<filter-class>com.oldox.examples.filter.FilterChainTestFilter2</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>FilterChainTestFilter2</filter-name>
+  	<url-pattern>/filterChainTest</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>FilterChainTestFilter</filter-name>
+  	<url-pattern>/filterChainTest</url-pattern>
+  </filter-mapping>
+  
   <servlet>
   	<servlet-name>GreetingServlet</servlet-name>
   	<servlet-class>com.oldox.examples.servlet.GreetingServlet</servlet-class>
@@ -25,6 +43,10 @@
   <servlet>
   	<servlet-name>HttpRequestExampleServlet</servlet-name>
   	<servlet-class>com.oldox.examples.servlet.HttpRequestExampleServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FilterChainTestServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.FilterChainTestServlet</servlet-class>
   </servlet>
   
   
@@ -39,5 +61,9 @@
   <servlet-mapping>
   	<servlet-name>HttpRequestExampleServlet</servlet-name>
   	<url-pattern>/request</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FilterChainTestServlet</servlet-name>
+  	<url-pattern>/filterChainTest</url-pattern>
   </servlet-mapping>
 </web-app>
