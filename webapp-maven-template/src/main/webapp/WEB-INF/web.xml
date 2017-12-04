@@ -40,6 +40,10 @@
   	<servlet-name>HttpRequestExampleServlet</servlet-name>
   	<servlet-class>com.oldox.examples.servlet.HttpRequestExampleServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>FilterChainTestServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.FilterChainTestServlet</servlet-class>
+  </servlet>
   
   <servlet>
   	<servlet-name>MyServlet1</servlet-name>
@@ -63,6 +67,7 @@
   	<servlet-name>HttpRequestExampleServlet</servlet-name>
   	<url-pattern>/request</url-pattern>
   </servlet-mapping>
+<<<<<<< HEAD
   
   <servlet-mapping>
   	<servlet-name>MyServlet1</servlet-name>
@@ -76,4 +81,10 @@
   <session-config>
   	<session-timeout>1</session-timeout>
   </session-config>
+=======
+  <servlet-mapping>
+  	<servlet-name>FilterChainTestServlet</servlet-name>
+  	<url-pattern>/filterChainTest</url-pattern>
+  </servlet-mapping>
+>>>>>>> branch 'servlet' of https://github.com/zhangc0804/webapp-maven-template.git
 </web-app>
