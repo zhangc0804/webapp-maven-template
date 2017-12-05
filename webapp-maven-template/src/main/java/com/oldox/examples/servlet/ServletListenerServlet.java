@@ -37,6 +37,7 @@ public class ServletListenerServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("doPost method is invoked");
+		System.out.println(req.getSession());
 		
 		// 获取ServletContext初始化时设置的参数
 		ServletContext context = req.getSession().getServletContext();

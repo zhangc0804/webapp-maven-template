@@ -38,6 +38,7 @@ public class GreetingServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("doPost method is invoked");
+		System.out.println(req.getSession());
 		resp.getWriter().write("aaaaaaaaaaaaaaaaa");
 
 		// 判断Servlet实例化次数
