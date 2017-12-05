@@ -7,12 +7,12 @@ public class MyHttpSessionListner implements HttpSessionListener {
 
 	@Override
 	public void sessionCreated(HttpSessionEvent arg0) {
-
+		System.out.println("the session is created");
 	}
 
 	@Override
 	public void sessionDestroyed(HttpSessionEvent arg0) {
-
+		System.out.println("the session is destroyed");
 	}
 
 }

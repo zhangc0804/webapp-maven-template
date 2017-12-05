@@ -40,10 +40,10 @@ public class GreetingServlet extends HttpServlet {
 		System.out.println("doPost method is invoked");
 		System.out.println(req.getSession());
 		resp.getWriter().write("aaaaaaaaaaaaaaaaa");
-
+		req.setAttribute("aaa", "aaa");
 		// 判断Servlet实例化次数
 		System.out.println("the count of this servlet's instance is:" + instanceCount);
-		resp.getWriter().close();
+//		resp.getWriter().close();
 	}
 
 	@Override
