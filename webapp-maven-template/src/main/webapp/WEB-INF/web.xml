@@ -77,6 +77,47 @@
   	<url-pattern>/MyServlet2</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ExactOneServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.ExactOneServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExactOneServlet</servlet-name>
+  	<url-pattern>/exactOneServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>ExactTwoServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.ExactTwoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExactTwoServlet</servlet-name>
+  	<url-pattern>/exactTwoServlet</url-pattern>
+  </servlet-mapping>
+  <!-- <servlet>
+  	<servlet-name>WildcardServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.WildcardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WildcardServlet</servlet-name>
+  	<url-pattern>/*</url-pattern>
+  </servlet-mapping> -->
+  <servlet>
+  	<servlet-name>ExtensionServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.ExtensionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ExtensionServlet</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>DefaultServlet</servlet-name>
+  	<servlet-class>com.oldox.examples.servlet.DefaultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DefaultServlet</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
   <session-config>
   	<session-timeout>60</session-timeout>
   </session-config>
